@@ -25,7 +25,7 @@ describe('GET', () => {
         .get('/login.html')
         .set('cookie', 'session-id=1')
         .expect(statusCodes.REDIRECT)
-        .expect('Location', 'ome.html', done);
+        .expect('Location', '/home.html', done);
     });
 
     it('should get the login for "/login.html" without cookie', done => {
